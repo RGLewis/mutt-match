@@ -71,20 +71,28 @@ select {
 
 // Breed inputs
 .breed-container {
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     width: 100%;
     
     @include tablet {
         flex-direction: column;
     }
+
+    @include mobile {
+        margin-top: 30px;
+    }
 }
 
 [class="breed-label"] {
-    width: 65%;
+    width: 50%;
     display: block;
     font-family: $primary-font;
     padding: 10px 10px 10px 0;
+
+    @include desktop {
+        width: 65%;
+    }
     
     @include tablet {
         width: 100%;
@@ -93,8 +101,12 @@ select {
 }
 
 #breed {
-    width: 35%;
+    width: 50%;
     
+    @include desktop {
+        width: 35%;
+    }
+
     @include tablet {
         width: 100%;
     }
@@ -103,14 +115,17 @@ select {
 // Age, Size, Gender styles
 // Flex styles
 .triple-option-container {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     
     @include tablet {
         flex-direction: column;
-        margin-top: 0;
+    }
+
+    @include mobile {
+        margin-top: 30px;
     }
 }
 
@@ -119,8 +134,7 @@ select {
 .age-container, .size-container, .gender-container {
     display: flex;
     flex-direction: column;
-    width: 33%;
-    text-align: center;
+    width: 31%;
     flex-wrap: wrap;
     
     @include tablet {
@@ -145,6 +159,8 @@ select {
     }
 
     select {
+        width: 100%;
+
         @include desktop {
             font-size: 0.8rem;
         }
@@ -163,7 +179,12 @@ select {
 
 // Margin and custom checkbox
 .option-selectors {
-    margin-top: 20px;
+    margin-top: 40px;
+
+    @include mobile {
+        margin-top: 30px;
+    }
+
     input {
         opacity: 0;
         position: absolute;

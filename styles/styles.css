@@ -173,6 +173,9 @@ fieldset {
   max-width: 1600px;
   width: 80%;
   margin: 0 auto; }
+  @media (max-width: 600px) {
+    .wrapper {
+      width: 90%; } }
 
 /* Font and Background Styles */
 html {
@@ -212,7 +215,7 @@ h3 {
 .button {
   font-family: "Love Ya Like A Sister", cursive;
   font-size: 2rem;
-  padding: 20px;
+  padding: 10px 20px;
   background: transparent;
   border: 4px solid slateblue;
   border-radius: 10px;
@@ -224,7 +227,7 @@ h3 {
   transition: border 500ms, box-shadow 500ms, border-radius 200ms;
   transition: border 500ms, box-shadow 500ms, border-radius 200ms, -webkit-box-shadow 500ms;
   display: block;
-  margin: 30px auto; }
+  margin: 40px auto; }
   .button:hover, .button:active, .button:focus {
     border: 4px solid slateblue;
     -webkit-box-shadow: 0px 4px 20px 10px slateblue;
@@ -238,6 +241,19 @@ h3 {
 
 header {
   padding-top: 40px; }
+  header .header-flex-container {
+    min-height: 40vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   header .accent-text {
     font-family: "Love Ya Like A Sister", cursive;
     border-bottom: 3px solid slateblue; }
@@ -543,7 +559,7 @@ select {
       font-size: 1.1rem; } }
 
 .breed-container {
-  margin-top: 20px;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,38 +570,50 @@ select {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; } }
+  @media (max-width: 600px) {
+    .breed-container {
+      margin-top: 30px; } }
 
 [class="breed-label"] {
-  width: 65%;
+  width: 50%;
   display: block;
   font-family: "Open Sans", sans-serif;
   padding: 10px 10px 10px 0; }
+  @media (max-width: 1200px) {
+    [class="breed-label"] {
+      width: 65%; } }
   @media (max-width: 900px) {
     [class="breed-label"] {
       width: 100%;
       padding: 10px 0; } }
 
 #breed {
-  width: 35%; }
+  width: 50%; }
+  @media (max-width: 1200px) {
+    #breed {
+      width: 35%; } }
   @media (max-width: 900px) {
     #breed {
       width: 100%; } }
 
 .triple-option-container {
-  margin-top: 20px;
+  margin-top: 40px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
   @media (max-width: 900px) {
     .triple-option-container {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      margin-top: 0; } }
+      flex-direction: column; } }
+  @media (max-width: 600px) {
+    .triple-option-container {
+      margin-top: 30px; } }
 
 .age-container, .size-container, .gender-container {
   display: -webkit-box;
@@ -595,8 +623,7 @@ select {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 33%;
-  text-align: center;
+  width: 31%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   @media (max-width: 900px) {
@@ -620,20 +647,25 @@ select {
   @media (max-width: 600px) {
     .age-container label, .size-container label, .gender-container label {
       width: 100%; } }
-  @media (max-width: 1200px) {
-    .age-container select, .size-container select, .gender-container select {
-      font-size: 0.8rem; } }
-  @media (max-width: 900px) {
-    .age-container select, .size-container select, .gender-container select {
-      width: 50%; } }
-  @media (max-width: 600px) {
-    .age-container select, .size-container select, .gender-container select {
-      width: 100%;
-      margin-top: 10px;
-      font-size: 1rem; } }
+  .age-container select, .size-container select, .gender-container select {
+    width: 100%; }
+    @media (max-width: 1200px) {
+      .age-container select, .size-container select, .gender-container select {
+        font-size: 0.8rem; } }
+    @media (max-width: 900px) {
+      .age-container select, .size-container select, .gender-container select {
+        width: 50%; } }
+    @media (max-width: 600px) {
+      .age-container select, .size-container select, .gender-container select {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1rem; } }
 
 .option-selectors {
-  margin-top: 20px; }
+  margin-top: 40px; }
+  @media (max-width: 600px) {
+    .option-selectors {
+      margin-top: 30px; } }
   .option-selectors input {
     opacity: 0;
     position: absolute; }
@@ -719,6 +751,7 @@ footer {
       font-size: 0.69rem; } }
 
 .grid-container {
+  margin-top: 80px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -733,7 +766,12 @@ footer {
   @media (max-width: 900px) {
     .grid-container {
       -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      margin: 80px auto 0 auto;
+      width: 70%; } }
+  @media (max-width: 600px) {
+    .grid-container {
+      width: 100%; } }
 
 .grid-item {
   display: -webkit-box;
@@ -749,9 +787,6 @@ footer {
   .grid-item .button {
     font-size: 1rem;
     color: slateblue; }
-    @media (max-width: 375px) {
-      .grid-item .button {
-        font-size: 0.8rem; } }
 
 .image-container {
   height: 400px;

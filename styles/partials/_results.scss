@@ -1,15 +1,24 @@
 // Set up the grid container
 .grid-container {
+    margin-top: 80px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     min-width: 0;
     min-height: 0;
+
     @include desktop {
         grid-template-columns: repeat(2, 1fr);
     }
+
     @include tablet {
         grid-template-columns: 1fr;
+        margin: 80px auto 0 auto;
+        width: 70%;
+    }
+
+    @include mobile {
+        width: 100%;
     }
 }
 
@@ -24,10 +33,6 @@
     .button {
         font-size: 1rem;
         color: $accent-color;
-        
-        @include final {
-            font-size: 0.8rem;
-        }
     }
 }
 
